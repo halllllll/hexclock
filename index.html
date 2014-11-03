@@ -1,96 +1,52 @@
 <!DOCTYPE html>
-<html><head>
-<script src="http://dl.dropbox.com/u/68719965/processing-1.3.6.min.js"></script>
-<script type="text/javascript">
-function () {
-	sizing();
-	$(window).resize(function() {
-		sizing();
-	});
-});
+<html>
 
-function sizing(){
-	$("#main").attr({height:$("#wrapper").height()});
-	$("#main").attr({width:$("#wrapper").width()});
-}
-</script>
-<style type="text/css">
-body{
-	margin: 0px;
-	padding: 0px;
-	position: relative;
-}
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Hexclock : made by processing.js">
 
-body #wrapper{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-}
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-.centered {
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
+    <title>Hexclock</title>
+  </head>
 
-*:focus{
-  outline:none;
-}
+  <body>
 
-</style>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hurafula/hexclock">View on GitHub</a>
 
-<script type="application/processing" data-processing-target="pjs">
-String r,g,b;
-int  h, s, m;
-int c;
-void setup(){
-  size(300, 300);
-  colorMode(RGB, 255);
-  smooth();
-  h = hour();
-  m = minute();
-  s = second();
-  r = hex(h, 2);
-  g = hex(m, 2);
-  b = hex(s, 2);
-  c = unhex(r+g+b);
-  background(c);
-  textAlign(CENTER);
-  fill(#ffffff);
-  textSize(50);
-  r = nf(unhex(r), 2);
-  g = nf(unhex(g), 2);
-  b = nf(unhex(b), 2);
-  text("#"+r+g+b, width/2,height/2);
-}
+          <h1 id="project_title">Hexclock</h1>
+          <h2 id="project_tagline">made by processing.js</h2>
 
-void draw(){
-  setup();
-}
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hurafula/hexclock/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hurafula/hexclock/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-</script>
-<style type="text/css">@font-face {
-  font-family: "PjsEmptyFont";
-  src: url('data:application/x-font-ttf;base64,AAEAAAAKAIAAAwAgT1MvMgAAAAAAAAEoAAAAVmNtYXAAAAAAAAABiAAAACxnbHlmAAAAAAAAAbwAAAAkaGVhZAAAAAAAAACsAAAAOGhoZWEAAAAAAAAA5AAAACRobXR4AAAAAAAAAYAAAAAGbG9jYQAAAAAAAAG0AAAABm1heHAAAAAAAAABCAAAACBuYW1lAAAAAAAAAeAAAAAgcG9zdAAAAAAAAAIAAAAAEAABAAAAAQAAAkgTY18PPPUACwAgAAAAALSRooAAAAAAyld0xgAAAAAAAQABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAACAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAIwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMAAQAAAAwABAAgAAAABAAEAAEAAABB//8AAABB////wAABAAAAAAAAAAgAEgAAAAEAAAAAAAAAAAAAAAAxAAABAAAAAAABAAEAAQAAMTcBAQAAAAAAAgAeAAMAAQQJAAEAAAAAAAMAAQQJAAIAAgAAAAAAAQAAAAAAAAAAAAAAAAAA')
-       format('truetype');
-}</style></head>
-<body>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="hexclock" class="anchor" href="#hexclock"><span class="octicon octicon-link"></span></a>hexclock</h1>
 
+<p>this is my first work of made by processing.js, a banal HexClock.</p>
+      </section>
+    </div>
 
-<div id="wrapper">
-<canvas id="pjs" tabindex="0" width="1267" height="384" style="image-rendering: optimizequality !important;"><br>
-</canvas></div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hexclock maintained by <a href="https://github.com/hurafula">hurafula</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-<div class="centered">
-  <center>
-       <h1>
-	Hello World!
-	</h1>
-	このページはテスト用ページです<br>
-  </center>
-</div>
+    
 
-
-<span style="position: absolute; top: 0px; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span></body></html>
+  </body>
+</html>
