@@ -53,10 +53,11 @@ void setup(){
   size(innerWidth, innerHeight);
   colorMode(RGB, 255);
   smooth();
-  background(99);
 }
 
 void draw(){
+//サイズの変化に対応するためにsetupを呼ぶ
+  setup();
   h = hour();
   m = minute();
   s = second();
